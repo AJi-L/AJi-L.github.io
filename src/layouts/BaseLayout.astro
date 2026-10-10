@@ -1,5 +1,6 @@
 ---
 import { site } from "../site.config.js";
+import "../styles/global.css";
 const { title, description } = Astro.props;
 const pageTitle = title ? `${title} · ${site.title}` : `${site.title} · ${site.description}`;
 const desc = description || site.description;
@@ -15,7 +16,6 @@ const withBase = (p) => `${base}${p}`;
     <meta name="description" content={desc} />
     <link rel="icon" href={withBase("/favicon.svg")} />
     <link rel="apple-touch-icon" href={withBase("/avatar.svg")} />
-    <link rel="stylesheet" href={withBase("/styles/global.css")} />
     <link rel="alternate" type="application/rss+xml" title={site.title} href={withBase("/rss.xml")} />
     <script is:inline>
       (function () {
