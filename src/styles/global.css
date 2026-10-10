@@ -165,6 +165,10 @@ mark { background: color-mix(in srgb, var(--accent) 32%, transparent); color: in
 .site-footer .links { display: flex; gap: 16px; }
 
 @media (max-width: 620px) {
-  .nav { display: none; }
-  .search-box input { width: 130px; }
+  .header-inner { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 12px; row-gap: 8px; }
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .header-actions { gap: 6px; }
+  .search-box input { width: 110px; }
+  .nav { order: 3; flex-basis: 100%; margin: 6px 0 0; gap: 18px; overflow-x: auto; }
 }
