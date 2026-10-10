@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<BaseLayout title="搜索">
+  <h1>搜索</h1>
+  <div id="cfg" data-base={base} hidden></div>
+  <input id="q" class="search-input" type="search" placeholder="输入关键词：标题 / 标签 / 正文都会搜" autocomplete="off" />
+  <div id="results" class="results"></div>
+
+  <script is:inline>
+    (function () {
+      var base = (document.getElementById("cfg") || {}).dataset ? document.getElementById("cfg").dataset.base : "";
+      var input = document.getElementById("q");
+      var results = document.getElementById("results");
+      var index = [];
+      var params = new URLSearchParams(location.search);
+      if (params.get("q")) input.value = params.get("q");
+
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>]/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c];
+        });
+      }
+      function mark(text, q) {
+        var t = esc(text);
+        if (!q) return t;
+        try {
+          return t.replace(new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>");
+        } catch (e) {
+          return t;
+        }
+      }
+      function score(p, q) {
+        var s = 0;
+        if (String(p.title || "").toLowerCase().indexOf(q) >= 0) s += 10;
+        (p.tags || []).forEach(function (t) {
+          if (String(t).toLowerCase().indexOf(q) >= 0) s += 5;
+        });
+        if (String(p.summary || "").toLowerCase().indexOf(q) >= 0) s += 3;
+        if (String(p.text || "").toLowerCase().indexOf(q) >= 0) s += 1;
+        return s;
+      }
+      function card(p, q) {
+        var tags = (p.tags || []).map(function (t) { return '<span class="tag">#' + esc(t) + "</span>"; }).join("");
+        var date = p.date ? String(p.date).slice(0, 10) : "";
+        return (
+          '<a class="result" href="' + base + p.url + '"><h3>' + mark(p.title, q) + "</h3>" +
+          (p.summary ? "<p>" + mark(p.summary, q) + "</p>" : "") +
+          '<div class="post-meta"><time>' + date + "</time>" + tags + "</div></a>"
+        );
+      }
+      function run() {
+        var q = input.value.trim().toLowerCase();
+        if (!q) {
+          results.innerHTML = '<p class="muted">输入关键词开始搜索。</p>';
+          return;
+        }
+        var hits = index
+          .map(function (p) { return { p: p, s: score(p, q) }; })
+          .filter(function (x) { return x.s > 0; })
+          .sort(function (a, b) { return b.s - a.s; })
+          .slice(0, 50);
+        results.innerHTML = hits.length
+          ? hits.map(function (x) { return card(x.p, q); }).join("")
+          : '<p class="muted">没有匹配的结果。</p>';
+      }
+      fetch(base + "/search-index.json")
+        .then(function (r) { return r.json(); })
+        .then(function (d) { index = d; run(); })
+        .catch(function () { results.innerHTML = '<p class="muted">搜索索引加载失败。</p>'; });
+      input.addEventListener("input", run);
+    })();
+  </script>
+</BaseLayout>

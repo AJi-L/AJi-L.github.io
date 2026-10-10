@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { visiblePosts, tagSlug } from "../../lib/posts.js";
+
+export function getStaticPaths() {
+  const seen = new Map();
+  for (const p of visiblePosts()) for (const t of p.tags) if (!seen.has(t)) seen.set(t, tagSlug(t));
+  return [...seen.entries()].map(([name, slug]) => ({ params: { tag: slug }, props: { name } }));
+}
+
+const { name } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const withBase = (p) => `${base}${p}`;
+const fmt = (d) => (d ? String(d).slice(0, 10) : "");
+const posts = visiblePosts().filter((p) => p.tags.includes(name));
+---
+<BaseLayout title={`标签：${name}`}>
+  <h1>标签：{name}</h1>
+  <ul class="post-list">
+    {posts.map((p) => (
+      <li class="post-item">
+        <a class="post-link" href={withBase(p.url)}>
+          <h2>{p.title}</h2>
+          {p.summary && <p class="post-summary">{p.summary}</p>}
+          <div class="post-meta"><time>{fmt(p.date)}</time></div>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p style="margin-top:24px"><a href={withBase("/tags/")}>← 全部标签</a></p>
+</BaseLayout>
