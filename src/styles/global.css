@@ -29,6 +29,9 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--text);
   font: 16px/1.75 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
@@ -68,13 +71,19 @@ img { max-width: 100%; }
 }
 .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-main { padding: 40px 0 56px; }
+main { flex: 1 0 auto; padding: 40px 0 72px; }
 
 /* ---------- hero ---------- */
 .hero { margin: 8px 0 34px; }
 .hero h1 { margin: 0 0 10px; font-size: clamp(26px, 4vw, 34px); line-height: 1.25; letter-spacing: -.01em; }
 .hero p { margin: 0; color: var(--muted); font-size: 15.5px; max-width: 60ch; }
-.hero .links { margin-top: 14px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+.hero .links { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+.hero .links a {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 15px; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface); color: var(--text); font-size: 13.5px; line-height: 1.6;
+}
+.hero .links a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
 
 .section-title { display: flex; align-items: baseline; gap: 10px; margin: 0 0 16px; font-size: 15px; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 
@@ -144,8 +153,8 @@ mark { background: color-mix(in srgb, var(--accent) 32%, transparent); color: in
 .muted { color: var(--muted); }
 
 /* ---------- footer ---------- */
-.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; background: var(--surface); }
-.site-footer .wrap { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding-top: 20px; padding-bottom: 26px; flex-wrap: wrap; }
+.site-footer { margin-top: 28px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; background: var(--surface); }
+.site-footer .wrap { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding-top: 26px; padding-bottom: 30px; flex-wrap: wrap; }
 .site-footer .links { display: flex; gap: 16px; }
 
 @media (max-width: 620px) {
