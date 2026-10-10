@@ -10,7 +10,7 @@
   --accent-soft: #eff6ff;
   --code-bg: #f1f5f9;
   --shadow: 0 1px 2px rgba(15, 23, 42, .06), 0 8px 24px rgba(15, 23, 42, .06);
-  --max: 780px;
+  --max: 900px;
 }
 :root[data-theme="dark"] {
   --bg: #0b0e14;
@@ -42,7 +42,7 @@ a:hover { text-decoration: underline; }
 img { max-width: 100%; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
-.wrap-wide { max-width: 1040px; }
+.wrap-wide { max-width: 1100px; }
 
 /* ---------- header ---------- */
 .site-header {
