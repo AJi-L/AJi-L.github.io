@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
-<BaseLayout title="搜索">
+<BaseLayout title="搜索" wide>
   <h1>搜索</h1>
   <div id="cfg" data-base={base} hidden></div>
   <input id="q" class="search-input" type="search" placeholder="输入关键词：标题 / 标签 / 正文都会搜" autocomplete="off" />

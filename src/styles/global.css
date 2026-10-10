@@ -42,6 +42,7 @@ a:hover { text-decoration: underline; }
 img { max-width: 100%; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+.wrap-wide { max-width: 1040px; }
 
 /* ---------- header ---------- */
 .site-header {
@@ -143,10 +144,10 @@ a.tag:hover { color: var(--accent); border-color: var(--accent); text-decoration
 /* ---------- search ---------- */
 .search-input {
   width: 100%;
-  padding: clamp(15px, 2.2vw, 22px) clamp(18px, 2.6vw, 26px);
-  font-size: clamp(15px, 2.4vw, 20px);
+  padding: 13px 18px;
+  font-size: 15.5px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 12px;
   background: var(--surface);
   color: var(--text);
   outline: none;
