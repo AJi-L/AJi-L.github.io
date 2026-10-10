@@ -36,6 +36,7 @@ export function getPosts() {
       draft: !!fm.draft,
       visibility: fm.visibility || "private",
       text: text.slice(0, 4000),
+      minutes: Math.max(1, Math.round(text.length / 350)),
       Content: mod.default,
     };
   });

@@ -1,7 +1,7 @@
 ---
 import { site } from "../site.config.js";
 const { title, description } = Astro.props;
-const pageTitle = title ? `${title} · ${site.title}` : site.title;
+const pageTitle = title ? `${title} · ${site.title}` : `${site.title} · ${site.description}`;
 const desc = description || site.description;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const withBase = (p) => `${base}${p}`;
@@ -14,19 +14,37 @@ const withBase = (p) => `${base}${p}`;
     <title>{pageTitle}</title>
     <meta name="description" content={desc} />
     <link rel="icon" href={withBase("/favicon.svg")} />
+    <link rel="apple-touch-icon" href={withBase("/avatar.svg")} />
     <link rel="stylesheet" href={withBase("/styles/global.css")} />
     <link rel="alternate" type="application/rss+xml" title={site.title} href={withBase("/rss.xml")} />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t !== "light" && t !== "dark") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href={withBase("/")}>{site.title}</a>
+        <a class="brand" href={withBase("/")}>
+          <img class="avatar" src={withBase("/avatar.svg")} alt="AJ" width="30" height="30" />
+          <span>{site.title}</span>
+        </a>
         <nav class="nav">
           {site.nav.map((n) => <a href={withBase(n.href)}>{n.label}</a>)}
         </nav>
-        <form class="search-box" action={withBase("/search/")} method="get" role="search">
-          <input type="search" name="q" placeholder="搜索…" aria-label="搜索" />
-        </form>
+        <div class="header-actions">
+          <form class="search-box" action={withBase("/search/")} method="get" role="search">
+            <input type="search" name="q" placeholder="搜索…" aria-label="搜索" />
+          </form>
+          <button id="theme-toggle" class="icon-btn" type="button" title="切换主题" aria-label="切换主题">◐</button>
+        </div>
       </div>
     </header>
 
@@ -37,8 +55,20 @@ const withBase = (p) => `${base}${p}`;
     <footer class="site-footer">
       <div class="wrap">
         <span>© {new Date().getFullYear()} {site.author}</span>
-        {site.social.map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
+        <span class="links">
+          <a href={withBase("/rss.xml")}>RSS</a>
+          {site.social.map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
+        </span>
       </div>
     </footer>
+
+    <script is:inline>
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var el = document.documentElement;
+        var next = el.dataset.theme === "dark" ? "light" : "dark";
+        el.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    </script>
   </body>
 </html>

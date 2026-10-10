@@ -3,21 +3,28 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { visiblePosts, tagSlug } from "../../lib/posts.js";
 
 export function getStaticPaths() {
-  return visiblePosts().map((post) => ({ params: { slug: post.slug }, props: { post } }));
+  const posts = visiblePosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.slug },
+    props: { post, prev: posts[i + 1] || null, next: posts[i - 1] || null },
+  }));
 }
 
-const { post } = Astro.props;
+const { post, prev, next } = Astro.props;
 const Content = post.Content;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const withBase = (p) => `${base}${p}`;
 const fmt = (d) => (d ? String(d).slice(0, 10) : "");
 ---
 <BaseLayout title={post.title} description={post.summary}>
-  <article class="post">
+  <article class="article">
     <header>
       <h1>{post.title}</h1>
       <div class="post-meta">
         <time>{fmt(post.date)}</time>
+        <span class="dot">·</span>
+        <span>{post.minutes} 分钟</span>
+        {post.tags.length > 0 && <span class="dot">·</span>}
         {post.tags.map((t) => (
           <a class="tag" href={withBase(`/tags/${tagSlug(t)}/`)}>#{t}</a>
         ))}
@@ -27,5 +34,25 @@ const fmt = (d) => (d ? String(d).slice(0, 10) : "");
       <Content />
     </div>
   </article>
-  <p style="margin-top:32px"><a href={withBase("/")}>← 返回首页</a></p>
+
+  {(prev || next) && (
+    <nav class="pager">
+      <span>
+        {prev && (
+          <a href={withBase(prev.url)}>
+            <span class="dir">← 上一篇</span>
+            {prev.title}
+          </a>
+        )}
+      </span>
+      <span style="text-align:right">
+        {next && (
+          <a href={withBase(next.url)}>
+            <span class="dir">下一篇 →</span>
+            {next.title}
+          </a>
+        )}
+      </span>
+    </nav>
+  )}
 </BaseLayout>
