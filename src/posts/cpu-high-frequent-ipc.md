@@ -1,13 +1,15 @@
 ---
 title: "进程接口被频繁调用致 CPU 占用率过高排查"
-date: 2025-10-08
+date: 2024-07-18
 tags: ["Android", "性能", "CPU", "排查"]
 summary: "问题描述 top命令查看当前进程CPU过高 进程名：android.hardware.automotive.vehicle@2.0 service 版本：Android11 排查流程 查看进程CPU占用率 从top命令查看得知，CPU是8核"
 draft: false
 visibility: public
 ---
 
-#### 问题描述
+![](/images/cpu-high-frequent-ipc/进程CPU占用率过高排查流程笔记-1713678100919-1.jpg)
+
+## 问题描述
 
 top命令查看当前进程CPU过高
 
@@ -26,9 +28,8 @@ Tasks: 372 total,   4 running, 368 sleeping,   0 stopped,   0 zombie
    276 logd         30  10  12G 174M 2.7M S 35.4   2.2   7:19.32 logd
 ```
 
-#### 排查流程
-
-##### 查看进程CPU占用率
+## 排查流程
+### 查看进程CPU占用率
 
 ```bash
 console:/ # top -p 19281
@@ -42,7 +43,7 @@ Tasks: 1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
 
 从top命令查看得知，CPU是8核的处理器， vehicle进程占用约50%， 按百分比计算约占用6%左右。
 
-##### 查看线程CPU占用率
+### 查看线程CPU占用率
 
 ```bash
 console:/ # top -H -p 19281
@@ -73,7 +74,7 @@ Threads: 18 total,   0 running,  18 sleeping,   0 stopped,   0 zombie
 
 可以看到其中占用较高的是线程19303、19307、20072、20058， 该4个线程线程名均有HwBinder，是HwBinder相关的线程。Android进程中，Binder相关的线程，基本上可以认定跟跨进程通信有关。binder和vndbinder使用的是AIDL接口， hwbinder使用的是HIDL接口。 这里能基本确定是有其他进程频繁调用Vehicle服务的接口引起的。
 
-##### 查找Binder客户端
+### 查找Binder客户端
 
 既然清楚是因为有其他进程频繁调用引起，那么下一步就是需要找出该调用的客户端了。在对外提供的接口上，加上binder pid和uid的打印。以此来查找对应的进程。
 
@@ -97,7 +98,7 @@ Threads: 18 total,   0 running,  18 sleeping,   0 stopped,   0 zombie
 root          19915      1 12493068 27708 futex_wait_queue_me 0 S xxx_service
 ```
 
-#### 验证流程
+## 验证流程
 
 1. 删除调用的服务，先把调用的进程改名备份
 
