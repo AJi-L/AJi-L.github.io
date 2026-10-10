@@ -1,8 +1,8 @@
 ---
-title: Android Studio 导入 AOSP 源码
+title: "Android Studio 导入 AOSP 源码"
 date: 2025-10-08
-tags: [AOSP, AndroidStudio, 调试]
-summary: 编译AOSP 生成工程文件 执行成功后，在AOSP根目录生成 如果是在服务器上运行AS，性能足够，这一步就可以了，通过Android Studio打开android.ipr即可 修改android.iml 1. 增加excludeFolde
+tags: ["AOSP", "AndroidStudio", "调试"]
+summary: "编译AOSP 生成工程文件 执行成功后，在AOSP根目录生成 如果是在服务器上运行AS，性能足够，这一步就可以了，通过Android Studio打开android.ipr即可 修改android.iml 1. 增加excludeFolde"
 draft: false
 visibility: public
 ---

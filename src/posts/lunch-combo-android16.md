@@ -1,8 +1,8 @@
 ---
-title: 告别 Lunch 菜单：Android 16 编译组合（Product-Release-Variant）
+title: "告别 Lunch 菜单：Android 16 编译组合（Product-Release-Variant）"
 date: 2025-12-29
-tags: [AOSP, 编译, lunch, Android16]
-summary: 告别 Lunch 菜单：详解 Android 16 全新编译组合 (Product Release Variant) Android16取消lunch menu显示 lunch combo的含义 lunch的combo一直由product,
+tags: ["AOSP", "编译", "lunch", "Android16"]
+summary: "告别 Lunch 菜单：详解 Android 16 全新编译组合 (Product Release Variant) Android16取消lunch menu显示 lunch combo的含义 lunch的combo一直由product,"
 draft: false
 visibility: public
 ---
