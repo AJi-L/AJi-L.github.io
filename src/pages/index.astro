@@ -12,12 +12,6 @@ const posts = visiblePosts();
   <section class="hero">
     <h1>{site.title}</h1>
     <p>{site.description}</p>
-    <div class="links">
-      <a href={withBase("/tags/")}>标签</a>
-      <a href={withBase("/search/")}>搜索</a>
-      <a href={withBase("/rss.xml")}>RSS</a>
-      {site.social.map((s) => <a href={s.href} target="_blank" rel="noopener">{s.label}</a>)}
-    </div>
   </section>
 
   <h2 class="section-title">最近文章</h2>

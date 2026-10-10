@@ -71,6 +71,8 @@ img { max-width: 100%; }
   color: var(--text); cursor: pointer; font-size: 15px; line-height: 1;
 }
 .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+a.icon-btn { text-decoration: none; }
+.icon-btn svg { display: block; }
 
 main { flex: 1 0 auto; padding: 40px 0 72px; }
 
@@ -78,13 +80,6 @@ main { flex: 1 0 auto; padding: 40px 0 72px; }
 .hero { margin: 8px 0 34px; }
 .hero h1 { margin: 0 0 10px; font-size: clamp(26px, 4vw, 34px); line-height: 1.25; letter-spacing: -.01em; }
 .hero p { margin: 0; color: var(--muted); font-size: 15.5px; max-width: 60ch; }
-.hero .links { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
-.hero .links a {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 15px; border: 1px solid var(--border); border-radius: 999px;
-  background: var(--surface); color: var(--text); font-size: 13.5px; line-height: 1.6;
-}
-.hero .links a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
 
 .section-title { display: flex; align-items: baseline; gap: 10px; margin: 0 0 16px; font-size: 15px; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 
