@@ -141,8 +141,19 @@ a.tag:hover { color: var(--accent); border-color: var(--accent); text-decoration
 .tag-cloud .count { color: var(--muted); font-size: 12px; }
 
 /* ---------- search ---------- */
-.search-input { width: 100%; padding: 14px 18px; font-size: 15px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); outline: none; margin: 8px 0 22px; }
-.search-input:focus { border-color: var(--accent); background: var(--bg); }
+.search-input {
+  width: 100%;
+  padding: clamp(15px, 2.2vw, 22px) clamp(18px, 2.6vw, 26px);
+  font-size: clamp(15px, 2.4vw, 20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  margin: 10px 0 24px;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.search-input:focus { border-color: var(--accent); background: var(--bg); box-shadow: 0 0 0 4px var(--accent-soft); }
 .results { display: flex; flex-direction: column; gap: 12px; }
 .result { display: block; padding: 16px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: inherit; }
 .result:hover { border-color: var(--accent); text-decoration: none; }
