@@ -36,7 +36,7 @@ repo sync -j32 -c --no-tags
 2. grafted字样是什么？
 
 - [https://adoyle.me/Today-I-Learned/git/grafted-commit.html](https://adoyle.me/Today-I-Learned/git/grafted-commit.html)
-- ![](/images/repo-shallow-clone/Pasted image 20250320102120.png)
+- ![](/images/repo-shallow-clone/Pasted%20image%2020250320102120.png)
 
 3. --depth参数是什么？怎么用？
 

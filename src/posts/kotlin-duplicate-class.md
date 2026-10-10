@@ -10,7 +10,7 @@ visibility: public
 #### 问题
 
 本地编译SystemUI的时候，Android Studio报错
-![](/images/kotlin-duplicate-class/Pasted image 20250320101838.png)
+![](/images/kotlin-duplicate-class/Pasted%20image%2020250320101838.png)
 
 ```xml
 Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.22 (org.jetbrains.kotlin:kotlin-stdlib:1.8.22) and kotlin-stdlib-jdk8-1.6.0 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0)

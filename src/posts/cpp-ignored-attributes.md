@@ -7,7 +7,7 @@ draft: false
 visibility: public
 ---
 
-![](/images/cpp-ignored-attributes/Pasted image 20250320101347.png)
+![](/images/cpp-ignored-attributes/Pasted%20image%2020250320101347.png)
 
 ```bash
 comm_manager/src/CommunicationManager.o.d -o out/soong/.intermediates/hardware/interfaces/automotive/vehicle/aidl/impl/user/communication/LibCommManager/android_vendor.34_arm64_armv8-a-branchprot_static_cfi/obj/hardware/interfaces/automotive/vehicle/aidl/impl/user/communication/comm_manager/src/CommunicationManager.o hardware/interfaces/automotive/vehicle/aidl/impl/user/communication/comm_manager/src/CommunicationManager.cpp

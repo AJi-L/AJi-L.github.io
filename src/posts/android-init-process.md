@@ -22,7 +22,7 @@ visibility: public
 > 2.  /system/core/rootdir/init.rc
 > 3. /system/core/init/first_stage_init.cpp
 
-![](/images/android-init-process/Untitled Diagram.drawio.png)
+![](/images/android-init-process/Untitled%20Diagram.drawio.png)
 
 ## 源码解析
 

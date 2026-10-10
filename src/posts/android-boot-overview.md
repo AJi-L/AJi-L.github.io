@@ -9,7 +9,7 @@ visibility: public
 
 # 【Android系统启动】 1. Android启动流程概览
 
-![](/images/android-boot-overview/【Android系统启动】 Android启动流程概览.jpg)
+![](/images/android-boot-overview/%E3%80%90Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E3%80%91%20Android%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88.jpg)
 
 > 作为一个Android开发工程师，了解Android系统从上电到全功能启动的流程，是十分有必要的。这个对排查系统疑难问题、定制系统开发都十分有帮助。因此记录以下系列文章笔记。文章编写与2024年，基于AOSP官网主干代码ARM64b部分学习，按年份计算代码处于Android14~Android15中间。
 >

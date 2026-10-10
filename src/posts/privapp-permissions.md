@@ -9,7 +9,7 @@ visibility: public
 
 Signature privileged permissions not in privapp-permissions allowlist{com.android.car.carlauncher (systempriv-appCarLauncher.apk) android.permission.SET_WALLPAPER_COMPONENT}
 
-![](/images/privapp-permissions/Pasted image 20250320102029.png)
+![](/images/privapp-permissions/Pasted%20image%2020250320102029.png)
 
 ```bash
 10-07 02:32:36.488 14748 14748 E System  : ******************************************

@@ -9,7 +9,7 @@ visibility: public
 
 # 【Android系统启动】Android Init 语言官网教程及中文翻译
 
-![](/images/android-init-language/微信图片_20240421041032.jpg)
+![](/images/android-init-language/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240421041032.jpg)
 
 > 文章根据system/core/init/README.md对Android Init语言进行翻译；
 >

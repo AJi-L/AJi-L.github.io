@@ -7,7 +7,7 @@ draft: false
 visibility: public
 ---
 
-![](/images/aosp-ninja-killed/Pasted image 20250320101451.png)
+![](/images/aosp-ninja-killed/Pasted%20image%2020250320101451.png)
 
 #### 原因和解决办法：线程太多导致
 

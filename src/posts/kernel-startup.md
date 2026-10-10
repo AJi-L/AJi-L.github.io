@@ -9,7 +9,7 @@ visibility: public
 
 # 【Android系统启动】 Kernel启动流程
 
-![](/images/kernel-startup/微信图片_20240420231203.jpg)
+![](/images/kernel-startup/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240420231203.jpg)
 
 ## 必要说明
 

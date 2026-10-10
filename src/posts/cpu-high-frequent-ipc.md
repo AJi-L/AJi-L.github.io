@@ -7,7 +7,7 @@ draft: false
 visibility: public
 ---
 
-![](/images/cpu-high-frequent-ipc/进程CPU占用率过高排查流程笔记-1713678100919-1.jpg)
+![](/images/cpu-high-frequent-ipc/%E8%BF%9B%E7%A8%8BCPU%E5%8D%A0%E7%94%A8%E7%8E%87%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5%E6%B5%81%E7%A8%8B%E7%AC%94%E8%AE%B0-1713678100919-1.jpg)
 
 ## 问题描述
 
