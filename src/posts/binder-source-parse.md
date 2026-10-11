@@ -31,7 +31,7 @@ IPC，英文全称为Inter-process communication，意思是进程间通信。�
 
 而线程一般是归属于进程内部的，可以共享同一个进程下的资源。
 
-![](/images/binder-source-parse/image-20240725192051975.png)
+
 
 ## Binder的由来 ~ 为什么要设计Binder
 
@@ -67,7 +67,7 @@ Binder的原理其实很简单，**就是将双方进程内核空间下的虚拟
 
 #### 操作系统的发展
 
-![](/images/binder-source-parse/image-20240729172758446.png)
+
 
 > 计算机操作系统的发展史，不同的教材有不同的划分，此处以 《现代操作系统（原书第三版）》Andrew.S.Tanenbaum 为草靠。
 
@@ -188,7 +188,7 @@ flowchart TB
 
 MMU是一个电路模块，置放在CPU和内存中间，主要负责的是虚拟内存地址和物理内存地址的映射。
 
-![](/images/binder-source-parse/image-20240729192223161.png)
+
 
 ## 源码一起读
 

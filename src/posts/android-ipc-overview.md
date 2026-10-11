@@ -25,7 +25,7 @@ IPC，英文全称为Inter-process communication，意思是进程间通信。�
 
 而线程一般是归属于进程内部的，可以共享同一个进程下的资源。
 
-![](/images/android-ipc-overview/image-20240725192051975.png)
+
 
 为什么我们现在会有进程和线程的概念？以及我们如今的系统为什么会基于这两个概念进程计算机资源的管理呢？这个需要从计算机操作系统的发展里程讲起。
 
@@ -45,13 +45,13 @@ IPC，英文全称为Inter-process communication，意思是进程间通信。�
 
 两个进程间，通过管道（一段缓存）进行数据传输，数据需要先从进程A拷贝到管道，进程B再从管道拷贝到进程B。
 
-![](/images/android-ipc-overview/image-20240726163606250.png)
+
 
 ### 共享内存
 
 多个进程共用同一块内存，不需要复制，但是控制复杂，且进程内的数据容易被其他进程访问，不安全。
 
-![](/images/android-ipc-overview/image-20240726164409750.png)
+
 
 ### Socket套接字
 

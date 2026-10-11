@@ -21,25 +21,25 @@ visibility: public
 
 1. 打开AS，按顺序点击图标；
 
-![](/images/avd-udp/image-20260622182410988.png)
+
 
 2. 选择设备定义，因为我们是做车载的，因此最好选一个平板设备，设备列表上有尺寸、分辨率和像素密度；
 
-![](/images/avd-udp/image-20260622182425982.png)
+
 
 3. 选择镜像，我们现在是Android 14， 对应API 34， 选择API 34的镜像；
 
 + 如果这里没有下载过API 34的镜像，会出现下图中其他API一样的下载图标，下载即可；
 
-![](/images/avd-udp/image-20260622182431807.png)
+
 
 4. 设置设备名及相关参数，设备名自己改一下适合的，参数大致看一下，选择自己合适的即可；
 
-![](/images/avd-udp/image-20260622182437328.png)
+
 
 5. 点击Finish之后，AVD便创建完成了，点击运行按钮，即可打开；
 
-![](/images/avd-udp/image-20260622182443066.png)
+
 
 # 编译自定义镜像
 
@@ -102,7 +102,7 @@ emulator -writable-system
 ## 步骤
 
 \> 如果之前启动过AVD，需要先将AVD Wipe Data
-![](/images/avd-udp/image-20260622182456833.png)
+
 
 1. 上述我们已经拿到了所需要的自定义的镜像文件，那么就可以使用镜像文件，替代Android Studio的镜像来运行了；
 
@@ -220,7 +220,7 @@ redir add udp:5000:6000   // 这个的意思是将PC端的5000端口，映射到
 
 2. 测试工具：[https://github.com/uname/PySockDebuger/releases/tag/1.0Beta](https://github.com/uname/PySockDebuger/releases/tag/1.0Beta) 可以用于桌面端模拟UDP发送和接收
 
-![](/images/avd-udp/image-20260622182510097.png)
+
 
 3. APK
 
@@ -228,7 +228,7 @@ redir add udp:5000:6000   // 这个的意思是将PC端的5000端口，映射到
 
 - 可以自行输入发送端口和消息进行发送，发送IP必须是10.0.2.2
 
-![](/images/avd-udp/image-20260623092453873.png)
+
 
 ## 附笔记：
 

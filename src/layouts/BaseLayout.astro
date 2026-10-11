@@ -82,5 +82,37 @@ const withBase = (p) => `${base}${p}`;
         });
       })();
     </script>
+
+    <script>
+      import mermaid from "mermaid";
+      const codes = Array.from(document.querySelectorAll("pre > code.language-mermaid"));
+      const nodes = codes.map((code) => {
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.dataset.src = code.textContent || "";
+        div.textContent = code.textContent || "";
+        code.parentElement.replaceWith(div);
+        return div;
+      });
+      async function renderMermaid() {
+        if (!nodes.length) return;
+        mermaid.initialize({
+          startOnLoad: false,
+          securityLevel: "loose",
+          theme: document.documentElement.dataset.theme === "dark" ? "dark" : "default",
+          flowchart: { curve: "basis", useMaxWidth: true },
+        });
+        for (const d of nodes) {
+          d.removeAttribute("data-processed");
+          d.textContent = d.dataset.src;
+        }
+        try {
+          await mermaid.run({ nodes });
+        } catch (e) {}
+      }
+      renderMermaid();
+      const tt = document.getElementById("theme-toggle");
+      if (tt) tt.addEventListener("click", () => setTimeout(renderMermaid, 30));
+    </script>
   </body>
 </html>
