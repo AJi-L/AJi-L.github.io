@@ -181,7 +181,7 @@ function source_vendorsetup() {
         for f in $(test -d $dir && \
             find -L $dir -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
 
-            if ; then
+            if [[ -z "$allowed" || "$allowed_files" =~ $f ]]; then
                 echo "including $f"; . "$f"
             else
                 echo "ignoring $f, not in $allowed"
@@ -366,7 +366,7 @@ EOF
     local T=$(gettop)
     local A=""
     local i
-    for i in `cat $T/build/envsetup.sh | sed -n "/^*function /s/function \([a-z_]*\).*/\1/p" | sort | uniq`; do
+    for i in `cat $T/build/envsetup.sh | sed -n "/^[[:blank:]]*function /s/function \([a-z_]*\).*/\1/p" | sort | uniq`; do
       A="$A $i"
     done
     echo $A
@@ -1460,7 +1460,7 @@ function is64bit()
 {
     local PID="$1"
     if [ "$PID" ] ; then
-        if  ; then
+        if [[ "$(adb shell cat /proc/$PID/exe | xxd -l 1 -s 4 -p)" -eq "02" ]] ; then
             echo "64"
         else
             echo ""
@@ -1778,7 +1778,7 @@ function runtest()
 }
 
 function godir () {
-    if ; then
+    if [[ -z "$1" ]]; then
         echo "Usage: godir <regex>"
         return
     fi
@@ -1790,7 +1790,7 @@ function godir () {
     else
         FILELIST=$T/filelist
     fi
-    if ; then
+    if [[ ! -f $FILELIST ]]; then
         echo -n "Creating index..."
         (\cd $T; find . -wholename ./out -prune -o -wholename ./.repo -prune -o -type f > $FILELIST)
         echo " Done"
@@ -1805,7 +1805,7 @@ function godir () {
     local pathname
     local choice
     if [[ ${#lines[@]} > 1 ]]; then
-        while ; do
+        while [[ -z "$pathname" ]]; do
             local index=1
             local line
             for line in ${lines[@]}; do
@@ -1869,7 +1869,7 @@ function pathmod() {
         return 1
     fi
 
-    if ; then
+    if [[ $# -ne 1 ]]; then
         echo "usage: pathmod <module>" >&2
         return 1
     fi
@@ -1897,7 +1897,7 @@ print module_info[module]['path'][0]" 2>/dev/null)
 # Go to a specific module in the android tree, as cached in module-info.json. If any build change
 # is made, and it should be reflected in the output, you should run 'refreshmod' first.
 function gomod() {
-    if ; then
+    if [[ $# -ne 1 ]]; then
         echo "usage: gomod <module>" >&2
         return 1
     fi
@@ -1933,7 +1933,7 @@ function get_make_command()
     if [ -f build/soong/soong_ui.bash ]; then
         # Always use the real make if -C is passed in
         for arg in "$@"; do
-            if ; then
+            if [[ $arg == -C* ]]; then
                 echo command make
                 return
             fi
@@ -1946,7 +1946,7 @@ function get_make_command()
 
 function _wrap_build()
 {
-    if ; then
+    if [[ "${ANDROID_QUIET_BUILD:-}" == true ]]; then
       "$@"
       return $?
     fi
@@ -2012,7 +2012,7 @@ function provision()
         echo ""
         echo -n "Are you sure you want to do this (yes/no)? "
         read
-        if  ; then
+        if [[ "${REPLY}" != "yes" ]] ; then
             echo "Not taking any action. Exiting." >&2
             return 1
         fi
@@ -2067,7 +2067,7 @@ function source_vendorsetup() {
         for f in $(test -d $dir && \
             find -L $dir -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
 
-            if ; then
+            if [[ -z "$allowed" || "$allowed_files" =~ $f ]]; then
                 echo "including $f"; . "$f"
             else
                 echo "ignoring $f, not in $allowed"

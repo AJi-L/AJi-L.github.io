@@ -173,7 +173,7 @@ function source_vendorsetup() {
         for f in $(cd "$T" && test -d $dir && \
             find -L $dir -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
 
-            if ; then
+            if [[ -z "$allowed" || "$allowed_files" =~ $f ]]; then
                 echo "including $f"; . "$T/$f"
             else
                 echo "ignoring $f, not in $allowed"
@@ -328,17 +328,17 @@ function addcompletions()
 function lunch()
 {
 	# 如果只有1个参数并且参数为--help，显示帮助
-    if ; then
+    if [[ $# -eq 1 && $1 = "--help" ]]; then
         _lunch_usage
         return 0
     fi
 
     # 没有参数或者参数大于3个，提示并返回
-    if ; then
+    if [[ $# -eq 0 ]]; then
         echo "No target specified. See lunch --help" 1>&2
         return 1
     fi
-    if ; then
+    if [[ $# -gt 3 ]]; then
         echo "Too many parameters given. See lunch --help" 1>&2
         return 1
     fi
@@ -351,9 +351,9 @@ function lunch()
 	# 如果不带-，就按照新格式处理；
     # Handle the legacy format
     local legacy=$(echo $1 | grep "-")
-    if ; then
+    if [[ $# -eq 1 && -n $legacy ]]; then
         IFS="-" read -r product release variant <<< "$1"
-        if  ||  || ; then
+        if [[ -z "$product" ]] || [[ -z "$release" ]] || [[ -z "$variant" ]]; then
             echo "Invalid lunch combo: $1" 1>&2
             echo "Valid combos must be of the form <product>-<release>-<variant> when using" 1>&2
             echo "the legacy format.  Run 'lunch --help' for usage." 1>&2
@@ -363,14 +363,14 @@ function lunch()
 
 	# 新格式只要product， 其他两个默认为trunk_staging和eng
     # Handle the new format.
-    if ; then
+    if [[ -z $legacy ]]; then
         product=$1
         release=$2
-        if ; then
+        if [[ -z $release ]]; then
             release=trunk_staging
         fi
         variant=$3
-        if ; then
+        if [[ -z $variant ]]; then
             variant=eng
         fi
     fi
@@ -405,7 +405,7 @@ function _lunch_meat()
     # 检查 build_build_var_cache 的执行结果是否成功
     if [ $? -ne 0 ]; then
         # 如果 product 包含 "_eng"、"_user" 或 "_userdebug"，提示用户可能是下划线使用错误
-        if ; then
+        if [[ "$product" =~ .*_(eng|user|userdebug) ]]; then
             echo "Did you mean -${product/*_/}? (dash instead of underscore)"
         fi
         return 1  # 返回错误码 1 表示失败
@@ -421,17 +421,17 @@ function _lunch_meat()
     export TARGET_BUILD_TYPE=release
 
     # 如果未设置 ANDROID_QUIET_BUILD（安静模式），则打印空行
-     || echo
+    [[ -n "${ANDROID_QUIET_BUILD:-}" ]] || echo
 
     # 调用 set_stuff_for_environment 设置构建环境
     set_stuff_for_environment
     # 如果未启用安静模式，则打印当前配置信息
-     || printconfig
+    [[ -n "${ANDROID_QUIET_BUILD:-}" ]] || printconfig
 
     # 如果未启用安静模式，并且存在 spam_for_lunch 脚本，则运行该脚本提供额外提示
-    if ; then
+    if [[ -z "${ANDROID_QUIET_BUILD}" ]]; then
         local spam_for_lunch=$(gettop)/build/make/tools/envsetup/spam_for_lunch
-        if ; then
+        if [[ -x $spam_for_lunch ]]; then
             $spam_for_lunch
         fi
     fi
@@ -440,7 +440,7 @@ function _lunch_meat()
     destroy_build_var_cache
 
     # 如果设置了 CHECK_MU_CONFIG，则检查多用户配置
-    if ; then
+    if [[ -n "${CHECK_MU_CONFIG:-}" ]]; then
       check_mu_config
     fi
 }
@@ -494,7 +494,7 @@ exit $?
 function _wrap_build()
 {
     # 如果设置了 ANDROID_QUIET_BUILD 为 true，则直接执行传入的命令，不显示额外信息
-    if ; then
+    if [[ "${ANDROID_QUIET_BUILD:-}" == true ]]; then
       "$@"
       return $?
     fi
@@ -669,7 +669,7 @@ function getoutdir
     fi
 
     # 如果输出目录不是绝对路径，则在其前面加上 TOP 以使其成为绝对路径
-    if ; then
+    if [[ "${out_dir}" != /* ]]; then
         out_dir="${TOP}/${out_dir}"
     fi
 
