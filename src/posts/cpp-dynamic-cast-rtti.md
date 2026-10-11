@@ -7,7 +7,7 @@ draft: false
 visibility: public
 ---
 
-![](/images/cpp-dynamic-cast-rtti/Pasted%20image%2020250320101302.png)
+![](/images/cpp-dynamic-cast-rtti/Pasted%2520image%252020250320101302.png)
 
 ```bash
 In file included from hardware/interfaces/automotive/vehicle/aidl/impl/user/communication/comm_soa/include/CommunicationSOAImpl.h:3:

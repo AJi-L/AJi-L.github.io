@@ -16,7 +16,7 @@ Reason:
 
 1. 通过服务列表查看壁纸服务是否运行
 
-![](/images/carlauncher-wallpaper/Pasted%20image%2020250317093814.png)
+![](/images/carlauncher-wallpaper/Pasted%2520image%252020250317093814.png)
 
 ```sh
 service list | grep wall -i
@@ -26,11 +26,11 @@ service list | grep wall -i
 
 - system_server通过判断config_enableWallpaperService是否为true决定是否拉起WallpaperManagerService；
 
-![](/images/carlauncher-wallpaper/Pasted%20image%2020250317093822.png)
+![](/images/carlauncher-wallpaper/Pasted%2520image%252020250317093822.png)
 
 - 查找config_enableWallpaperService配置，发现在图片以下地方都有存在此配置；
 
-![](/images/carlauncher-wallpaper/Pasted%20image%2020250317093829.png)
+![](/images/carlauncher-wallpaper/Pasted%2520image%252020250317093829.png)
 
 ```sh
 ./frameworks/base/core/res/res/values/symbols.xml:335
@@ -40,7 +40,7 @@ service list | grep wall -i
 
 3. logcat -v color -b system 查看wallpaper确定是否由于config原因无法起来
 
-![](/images/carlauncher-wallpaper/Pasted%20image%2020250317093836.png)
+![](/images/carlauncher-wallpaper/Pasted%2520image%252020250317093836.png)
 这里和上面代码的日志一致
 
 #### 解决办法

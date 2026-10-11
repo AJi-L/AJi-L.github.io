@@ -8,7 +8,7 @@ visibility: public
 ---
 
 #### 报错
-![](/images/repo-sync-failing/Pasted%20image%2020250320101731.png)
+![](/images/repo-sync-failing/Pasted%2520image%252020250320101731.png)
 ```sh
 	clang-3289846/lib64/clang/3.8/include/mm3dnow.h
 	clang-32898

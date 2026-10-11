@@ -37,7 +37,7 @@ flowchart LR
 
 这里不会讲述从真正按下开关按钮的时候，从硬件上电到BootRom代码的过程，毕竟各种芯片电路等相关情况不一致。但是可以理解为BootRom就是存储在芯片ROM里面的高低电平数据，芯片上电后内部的设计会引导电路进入这一部分代码所在的电路，从而执行该代码的逻辑。如果在硬件和代码软件无法转弯过来的，可以参考这个知乎回答[代码是如何控制硬件的？ - 随风的回答 - 知乎 ](https://www.zhihu.com/question/20492284/answer/15279863)
 
-> The **boot ROM** is a type of [ROM](https://en.wikipedia.org/wiki/ROM) that is used for [booting](https://en.wikipedia.org/wiki/Booting) a computer system.[[1\]](https://en.wikipedia.org/wiki/Boot_ROM#cite_note-1) There are two types: a [mask](https://en.wikipedia.org/wiki/Mask_rom) boot ROM that cannot be changed afterwards and a boot [EEPROM](https://en.wikipedia.org/wiki/EEPROM), which can contain an [UEFI](https://en.wikipedia.org/wiki/UEFI) implementation.
+> The **boot ROM** is a type of [ROM](https://en.wikipedia.org/wiki/ROM) that is used for [booting](https://en.wikipedia.org/wiki/Booting) a computer system.(https://en.wikipedia.org/wiki/Boot_ROM#cite_note-1) There are two types: a [mask](https://en.wikipedia.org/wiki/Mask_rom) boot ROM that cannot be changed afterwards and a boot [EEPROM](https://en.wikipedia.org/wiki/EEPROM), which can contain an [UEFI](https://en.wikipedia.org/wiki/UEFI) implementation.
 >
 > Upon power up, hardware usually starts uninitialized. To continue booting, the system may need to read a [bootloader](https://en.wikipedia.org/wiki/Bootloader) from some peripheral device. It is often easier to implement routines for reading from external storage devices in software than in hardware. A boot ROM provides a place to store this initial loading code, at a fixed location immediately available to the processor when execution starts.
 >
