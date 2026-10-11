@@ -85,7 +85,9 @@ const withBase = (p) => `${base}${p}`;
 
     <script>
       import mermaid from "mermaid";
-      const codes = Array.from(document.querySelectorAll("pre > code.language-mermaid"));
+      const codes = Array.from(
+        document.querySelectorAll('pre[data-language="mermaid"] > code, pre > code.language-mermaid')
+      );
       const nodes = codes.map((code) => {
         const div = document.createElement("div");
         div.className = "mermaid";
