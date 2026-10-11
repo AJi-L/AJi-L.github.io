@@ -1,6 +1,6 @@
 ---
 title: "Android 性能优化概览"
-date: 2024-07-23
+date: 2026-10-11
 tags: ["Android", "性能"]
 summary: "【Android性能优化】Android性能优化概览 性能优化的目的 其实笔者做性能优化的经验不算很多，但是每个软件产品或者软件项目在开发时，都会经历性能优化的工作。按照作者的理解，我认为几个字以概括， 快、稳、省。 快：冷启动时间、热启动"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 #  【Android性能优化】Android性能优化概览
-
-![](/images/android-perf-overview/8745b25151c8b0dac0a963bc789c5f1.jpg)
 
 ## 性能优化的目的
 

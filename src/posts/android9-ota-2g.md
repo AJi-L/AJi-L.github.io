@@ -1,6 +1,6 @@
 ---
 title: "Android 9 超过 2G 升级包无法升级问题"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["Android", "OTA", "升级"]
 summary: "问题描述 Android9系统，当升级包大小超过2G的时候，升级失败。 原因分析 update engine报错 通过日志可以看出update engine报错错误码kDownloadInvalidMetadataMagicString（2"
 draft: false

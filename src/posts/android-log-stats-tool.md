@@ -1,6 +1,6 @@
 ---
 title: "Android 日志数据统计工具"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["Android", "日志", "工具"]
 summary: "Android logcat数据统计工具 工具背景 在Android系统开发中，经常涉及多个模块的集成和开发。各个模块开发，肯定都希望自己的接口等相关日志信息越多越好，避免后面排（扯）查（皮）困难。 然后不加限制和规范的日志，容易造成log"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 # Android logcat数据统计工具
-
-![](/images/android-log-stats-tool/03de76da20a8f65b1ecc5c98ab9bb75.jpg)
 
 ## 工具背景
 

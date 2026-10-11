@@ -1,6 +1,6 @@
 ---
 title: "CPU 占用率检测原理和优化方向"
-date: 2024-07-23
+date: 2026-10-11
 tags: ["Android", "CPU", "性能"]
 summary: "【Android性能优化】Android CPU占用率检测原理和优化方向 CPU相关知识 1. CPU占用的基本计算公式 (1 空闲态运行时间/总运行时间) 100% 2. Hz、Tick、Jiffies： Hz：Linux核心每隔固定周期"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 #  【Android性能优化】Android CPU占用率检测原理和优化方向
-
-![](/images/cpu-usage-detect/4372e373033cb1c7039140acbc228d3.jpg)
 
 ### CPU相关知识
 

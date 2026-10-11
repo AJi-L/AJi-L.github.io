@@ -1,6 +1,6 @@
 ---
 title: "BootLoader - Little Kernel 启动流程源码解析"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["Android", "BootLoader", "LK", "启动"]
 summary: "【Android系统启动】 BootLoader Little Kernel启动流程源码解析 前言 + 后文中的lk指 Little Kernel + Android启动会经过BootLoader阶段， BootLoader中， 挑选lit"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 # 【Android系统启动】 BootLoader - Little Kernel启动流程源码解析
-
-![](/images/lk-bootloader/781eb14b0bf847d42873d7e93884d2a.jpg)
 
 ## 前言
 

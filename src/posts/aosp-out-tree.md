@@ -1,6 +1,6 @@
 ---
 title: "Android 系统编译 out 目录结构（参考）"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["AOSP", "out目录", "参考"]
 summary: "【Android开发技巧】Android系统编译out目录结构 文章为Android系统编译后out目录树结构，系统版本为Android13，以供参考。"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 # 【Android开发技巧】Android系统编译out目录结构
-
-![](/images/aosp-out-tree/be1fa0fff374a448b66813a15ce4f73.jpg)
 
 文章为Android系统编译后out目录树结构，系统版本为Android13，以供参考。
 

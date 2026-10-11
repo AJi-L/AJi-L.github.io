@@ -1,6 +1,6 @@
 ---
 title: "Android Zygote 进程启动流程源码解析"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["Android", "Zygote", "启动", "源码"]
 summary: "【Android系统启动】 Android Zygote 进程启动流程源码解析 前言 1. 文章源码按照AOSP官网源码platform/superproject/main Android Code Search进程代码进行解读； 2. 如"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 # 【Android系统启动】 Android Zygote 进程启动流程源码解析
-
-![](/images/zygote-startup/e09bbb73e74ac183b226f49fdfcb6c1.jpg)
 
 ## 前言
 

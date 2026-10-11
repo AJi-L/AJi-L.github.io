@@ -1,6 +1,6 @@
 ---
 title: "如何通过进程找到所在目录"
-date: 2024-07-18
+date: 2026-10-11
 tags: ["Android", "进程", "调试"]
 summary: "【Android开发技巧】如何通过进程找到所在目录？ 在开发和排查系统问题的时候，进场会遇到需要找进程所在目录的时候，在此记录一篇笔记。 通过Linux命令查找 这种方法是普遍适用的，无论Android应用、原生命令等都可以查找。 1. p"
 draft: false
@@ -8,8 +8,6 @@ visibility: public
 ---
 
 # 【Android开发技巧】如何通过进程找到所在目录？
-
-![](/images/find-process-dir/6bb6f7b80a8abe6548d41ad8e5660d3.jpg)
 
 在开发和排查系统问题的时候，进场会遇到需要找进程所在目录的时候，在此记录一篇笔记。
 
