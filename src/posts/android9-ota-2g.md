@@ -7,8 +7,6 @@ draft: false
 visibility: public
 ---
 
-![](/images/android9-ota-2g/82e144e7c4b41afc669a5032c2de5e0.jpg)
-
 ### 问题描述
 
 Android9系统，当升级包大小超过2G的时候，升级失败。
