@@ -1,5 +1,5 @@
 ---
-title: "Android CameraServer 导致无法开机问题"
+title: "【问题排查】CameraServer 导致无法开机"
 date: 2025-10-10
 tags: ["Android", "启动", "Camera"]
 summary: "现象 黑屏，无法开机 原因 本质原因：CameraServer启动失败导致 日志"

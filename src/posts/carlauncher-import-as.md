@@ -1,5 +1,5 @@
 ---
-title: "CarLauncher 导入到 Android Studio 方法"
+title: "【工具环境】CarLauncher 导入到 Android Studio"
 date: 2025-10-09
 tags: ["CarLauncher", "AndroidStudio"]
 summary: "Step 1. Anaylyze the dependencies and draw a dependencies tree; 分析模块依赖，并画出依赖结构； 2. Import or new Modules from the smalle"

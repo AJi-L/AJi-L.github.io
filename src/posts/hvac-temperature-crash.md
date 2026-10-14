@@ -1,5 +1,5 @@
 ---
-title: "空调 APP 滑动温度条崩溃（HVAC_TEMPERATURE_SET）"
+title: "【问题排查】空调 APP 滑动温度条崩溃"
 date: 2026-06-16
 tags: ["HVAC", "CarProperty", "崩溃"]
 summary: "原因 CarService里面专门对HVAC TEMPERATURE SET配置做了修改 修改"

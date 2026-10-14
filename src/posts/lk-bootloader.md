@@ -1,5 +1,5 @@
 ---
-title: "BootLoader - Little Kernel 启动流程源码解析"
+title: "【启动流程 2】BootLoader：Little Kernel 启动源码解析"
 date: 2026-10-11
 tags: ["Android", "BootLoader", "LK", "启动"]
 summary: "【Android系统启动】 BootLoader Little Kernel启动流程源码解析 前言 + 后文中的lk指 Little Kernel + Android启动会经过BootLoader阶段， BootLoader中， 挑选lit"

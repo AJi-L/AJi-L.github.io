@@ -1,5 +1,5 @@
 ---
-title: "AOSP 编译流程（脚本篇）"
+title: "【编译构建】AOSP 编译流程（脚本篇）"
 date: 2025-10-08
 tags: ["AOSP", "编译", "脚本"]
 summary: "基本知识 + Android编译一般输入如下命令进行选择全编 + 单编 mm 、 mma 、 mmm 、 mmma 脚本篇 source envsetup.sh 源码解析 编译的第一步是运行 source build/envsetup.sh"

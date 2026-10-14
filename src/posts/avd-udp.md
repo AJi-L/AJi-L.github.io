@@ -1,5 +1,5 @@
 ---
-title: "自定义 AVD 镜像搭建与主机 UDP 通信"
+title: "【工具环境】自定义 AVD 镜像与主机 UDP 通信"
 date: 2026-06-23
 tags: ["AVD", "模拟器", "UDP"]
 summary: "前置条件 1. 安装Android Studio； + 参考1： 安装 Android Studio + Android Studio 安装配置教程 Windows(详细版) CSDN博客 2. adb环境变量 + 安装好AS之后，一般就会"

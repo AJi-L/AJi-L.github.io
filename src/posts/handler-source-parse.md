@@ -1,5 +1,5 @@
 ---
-title: "Android Handler 源码解析（Looper / MessageQueue）"
+title: "【源码解析】Android Handler（Looper / MessageQueue）"
 date: 2026-10-11
 tags: ["Android", "Handler", "Looper", "消息机制"]
 summary: "【Android Framewrok】Handler源码解析 日期：2023 06 29 学习资料： 1. Handler.java Android Code Search 2. Android之Handler机制（终极篇）：面试常见问题汇"

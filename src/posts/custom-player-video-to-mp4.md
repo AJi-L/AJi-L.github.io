@@ -1,5 +1,5 @@
 ---
-title: "定制播放器加密课程视频逆向与无损转 mp4"
+title: "【逆向分析】定制播放器加密课程视频无损转 mp4"
 date: 2026-10-14
 tags: ["逆向", "视频", "H.264", "MP4", "容器封装", "FFmpeg", "PowerShell"]
 summary: "把某定制课程播放器的加密课程视频（.vep / .sz）无损转成 mp4。用播放器当解密黑盒（代理 avformat-58.dll 截 AVIOContext 顺序读明文）；.vep 明文是 M2TS 直接重封装；.sz 明文是被改写过的 "

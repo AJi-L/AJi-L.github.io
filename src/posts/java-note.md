@@ -1,13 +1,11 @@
 ---
-title: "Java：把成员变量赋值给局部变量（avoid getfield opcode）"
-date: 2023-07-05
+title: "【基础笔记】Java 成员变量赋值给局部变量（avoid getfield opcode）"
+date: 2026-10-14
 tags: ["Java", "JVM", "字节码"]
-summary: "Java Note 问题积累 为什么许多源码地方把成员变量赋值给局部变量？是否有什么说法？ 参考资料： 1. Java为什么成员变量赋值给局部变量 avoid getfield opcode 成知节的博客 CSDN博客 2. jdk源码中为"
+summary: "问题积累 为什么许多源码地方把成员变量赋值给局部变量？是否有什么说法？ 参考资料： 1. Java为什么成员变量赋值给局部变量 avoid getfield opcode 成知节的博客 CSDN博客 2. jdk源码中为什么把成员变量赋值给"
 draft: false
 visibility: public
 ---
-
-# Java Note
 
 ## 问题积累
 

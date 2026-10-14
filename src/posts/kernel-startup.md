@@ -1,5 +1,5 @@
 ---
-title: "Kernel 启动流程"
+title: "【启动流程 3】Kernel 启动流程"
 date: 2026-10-11
 tags: ["Android", "Kernel", "启动"]
 summary: "【Android系统启动】 Kernel启动流程 必要说明 1. Android会在Linux Kenerl基础上做一些Android相关的补充，成为Android Common Kernel（ACK），Android Kernel相关的资"

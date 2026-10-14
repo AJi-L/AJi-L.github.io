@@ -1,5 +1,5 @@
 ---
-title: "AOSP 编译及 AVD 使用"
+title: "【工具环境】AOSP 编译及 AVD 使用"
 date: 2026-06-22
 tags: ["AOSP", "AVD", "编译"]
 summary: "AVD编译与制作 下载 Download 按照官网源码下载流程，下载代码，这里将main换成想要的分支名，目前拉的是android14 release； 编译 Build 1. lunch有很多选项，选择SDK开头的就可以，后面架构具体看本"

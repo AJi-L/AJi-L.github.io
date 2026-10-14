@@ -1,5 +1,5 @@
 ---
-title: "Android 14 全部系统属性含义"
+title: "【参考资料】Android 14 全部系统属性含义"
 date: 2024-07-18
 tags: ["Android", "系统属性", "参考"]
 summary: "【Android经验技巧】 Android14全部系统属性含义 属性来源： Android14 虚拟设备中， getprop获取； 因为该系统属性太多，部分可能存在纰漏，如发现错误，可联系作者，谢谢大家 apex.all.ready: tr"

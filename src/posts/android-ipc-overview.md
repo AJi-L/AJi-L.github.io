@@ -1,5 +1,5 @@
 ---
-title: "Android IPC 概述（进程/线程与常见 IPC 机制）"
+title: "【源码解析】Android IPC 概述（进程/线程与常见机制）"
 date: 2024-07-29
 tags: ["Android", "IPC", "进程通信"]
 summary: "【Android IPC】 Android IPC概述 概述 IPC，英文全称为Inter process communication，意思是进程间通信。这里包含了两个概念，进程和通信，我们先了解一下进程、通信和进程间通信三个概念。 Wik"

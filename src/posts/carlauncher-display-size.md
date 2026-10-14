@@ -1,5 +1,5 @@
 ---
-title: "CarLauncher 显示尺寸不正常"
+title: "【问题排查】CarLauncher 显示尺寸不正常"
 date: 2025-10-09
 tags: ["CarLauncher", "显示"]
 summary: "现象 CarLauncher移植到Android Studio后，App列表页面显示不正常，图标偏小，布局偏移； 正常的现象（源码编译出来的CarLauncher） 不正常的现象（Android Studio编译） 解决思路 没有怎么解决过"

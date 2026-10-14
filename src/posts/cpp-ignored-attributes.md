@@ -1,5 +1,5 @@
 ---
-title: "编译报错：'visibility' attribute ignored [-Werror,-Wignored-attributes]"
+title: "【编译构建】报错 'visibility' attribute ignored"
 date: 2025-10-10
 tags: ["C++", "AOSP", "编译", "报错排查"]
 summary: "Solution"

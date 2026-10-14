@@ -1,5 +1,5 @@
 ---
-title: "Android Init 进程启动流程源码解析"
+title: "【启动流程 4】Android Init 进程启动源码解析"
 date: 2026-10-11
 tags: ["Android", "Init", "启动", "源码"]
 summary: "【Android系统启动】 Android Init 进程启动流程源码解析 前言 1. 文章源码按照AOSP官网源码android14 releaseInit进程代码进行解读； 2. 如有不当之处，麻烦指出作者进行修正 代码位置 1. sy"

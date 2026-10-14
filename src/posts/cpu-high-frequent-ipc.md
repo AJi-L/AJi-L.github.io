@@ -1,5 +1,5 @@
 ---
-title: "进程接口被频繁调用致 CPU 占用率过高排查"
+title: "【问题排查】进程接口频繁调用致 CPU 占用率过高"
 date: 2026-10-11
 tags: ["Android", "性能", "CPU", "排查"]
 summary: "问题描述 top命令查看当前进程CPU过高 进程名：android.hardware.automotive.vehicle@2.0 service 版本：Android11 排查流程 查看进程CPU占用率 从top命令查看得知，CPU是8核"

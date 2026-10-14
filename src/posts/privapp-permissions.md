@@ -1,5 +1,5 @@
 ---
-title: "运行报错：Signature|privileged 权限不在 privapp-permissions 白名单"
+title: "【问题排查】Signature|privileged 权限不在白名单"
 date: 2025-10-10
 tags: ["Android", "权限", "privapp", "报错排查"]
 summary: "Signature privileged permissions not in privapp permissions allowlist{com.android.car.carlauncher (systempriv appCarLaun"

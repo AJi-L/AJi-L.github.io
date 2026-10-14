@@ -1,5 +1,5 @@
 ---
-title: "AOSP 编译报错 ninja failed with signal killed（线程过多）"
+title: "【编译构建】报错 ninja failed with signal killed（线程过多）"
 date: 2025-09-24
 tags: ["AOSP", "编译", "报错排查", "swap"]
 summary: "原因和解决办法：线程太多导致 网络上大部分的原因基本上都是Android服务器环境内存不足，需要检查内存或者通过检查内存交换区来进行解决；然而在这里不起作用。 在ninja killed的时候，部分时候Ubuntu的确是卡顿或者卡死的， V"

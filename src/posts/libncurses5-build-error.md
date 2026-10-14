@@ -1,5 +1,5 @@
 ---
-title: "libncurses5 编译报错"
+title: "【编译构建】缺 libncurses5 导致编译失败（无 super.img）"
 date: 2025-10-10
 tags: ["AOSP", "编译", "报错排查"]
 summary: "现象： 编译镜像没有super.img 排查过程： 1. 脚本中generate super报错，无法找到otatools等工具，对比正常情况，工具在lagvm qssi下的out/dist/目录下 qssi编译失败； 2. 直接编译qss"

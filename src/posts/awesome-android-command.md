@@ -1,5 +1,5 @@
 ---
-title: "Awesome Android Command（常用命令速查）"
+title: "【参考资料】Awesome Android Command（命令速查）"
 date: 2024-07-18
 tags: ["Android", "命令", "速查"]
 summary: "Awesome Android Command ADB logcat"

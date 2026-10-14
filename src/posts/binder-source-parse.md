@@ -1,5 +1,5 @@
 ---
-title: "Android Binder 源码解析（含内核/用户空间）"
+title: "【源码解析】Android Binder（含内核/用户空间）"
 date: 2026-10-11
 tags: ["Android", "Binder", "IPC", "源码"]
 summary: "【Android IPC】Android Binder源码解析 此文章为课程学习笔记 结合【手撕 FrameWork源码，从Binder → Handler → Zygote → AMS → PMS → WMS 彻底讲穿原理】https:/"

@@ -1,5 +1,5 @@
 ---
-title: "编译报错：use of dynamic_cast requires -frtti"
+title: "【编译构建】报错 use of dynamic_cast requires -frtti"
 date: 2025-10-10
 tags: ["C++", "RTTI", "AOSP", "报错排查"]
 summary: "Solution bp文件添加 RTTI（Run Time Type Information，运行时类型信息）是 C++ 中的一种机制，允许程序在运行时获取对象的类型信息。通过 RTTI，程序可以在运行时检查和操作对象的类型，而不仅仅是在编"

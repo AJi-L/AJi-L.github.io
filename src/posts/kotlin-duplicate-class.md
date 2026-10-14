@@ -1,5 +1,5 @@
 ---
-title: "Kotlin 版本冲突报错 Duplicate class"
+title: "【编译构建】Kotlin 版本冲突 Duplicate class"
 date: 2025-10-10
 tags: ["Kotlin", "Gradle", "报错排查"]
 summary: "问题 本地编译SystemUI的时候，Android Studio报错 解决办法： build.gradle添加"

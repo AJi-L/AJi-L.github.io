@@ -1,5 +1,5 @@
 ---
-title: "Android SystemServer 进程启动流程源码解析"
+title: "【启动流程 6】Android SystemServer 进程启动源码解析"
 date: 2026-10-11
 tags: ["Android", "SystemServer", "启动", "源码"]
 summary: "【Android系统启动】 Android SystemServer 进程启动流程源码解析 前言 1. 文章源码按照AOSP官网源码platform/superproject/main Android Code Search代码进行解读； "

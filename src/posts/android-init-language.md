@@ -1,5 +1,5 @@
 ---
-title: "Android Init 语言（官网教程 + 中文翻译）"
+title: "【参考资料】Android Init 语言（官网教程 + 中文翻译）"
 date: 2026-10-11
 tags: ["Android", "Init", "启动"]
 summary: "【Android系统启动】Android Init 语言官网教程及中文翻译 文章根据system/core/init/README.md对Android Init语言进行翻译； 下面给出Init语言中文翻译和原文，翻译为机翻和个人翻译综合完"

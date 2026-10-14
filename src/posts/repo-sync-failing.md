@@ -1,5 +1,5 @@
 ---
-title: "Repo sync 报错 Failing Repos（-j1 --fail-fast）"
+title: "【编译构建】Repo sync 报错 Failing Repos"
 date: 2025-10-08
 tags: ["repo", "编译", "报错排查"]
 summary: "报错 处理 1. 删除repo fail的文件夹， 重新repo sync即可； Preferences 1. master分支仓库更新方法 try re running with \" j1 fail fast\" to exit at t "

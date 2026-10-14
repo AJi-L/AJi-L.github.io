@@ -1,5 +1,5 @@
 ---
-title: "Android 常用签名开发与签名转换技巧"
+title: "【工具环境】Android 签名开发与转换技巧"
 date: 2024-07-18
 tags: ["Android", "签名", "keystore"]
 summary: "Android常用签名方式及签名转换技巧 基本知识 1. 常用的Android签名有.keystore，.jks，.pk8，.x509.pem 2. .keystore: Java KeyStore 文件，安全证书（授权证书或公钥证书）以及"

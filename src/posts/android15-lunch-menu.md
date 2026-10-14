@@ -1,5 +1,5 @@
 ---
-title: "Android 15 lunch 无法显示 menu"
+title: "【问题排查】Android 15 lunch 无法显示 menu"
 date: 2025-07-08
 tags: ["AOSP", "编译", "lunch"]
 summary: "Issue source build/envsetup.sh和lunch 后，无法显示menu； Fixed 疑似因为部分环境变量没有提前设置好，因此导致了此错误。 大部分情况根据这个步骤，可以解决 Preferences 1. lunch"

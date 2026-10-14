@@ -1,5 +1,5 @@
 ---
-title: "Android 编译流程源码解析"
+title: "【编译构建】Android 编译流程源码解析"
 date: 2024-07-18
 tags: ["AOSP", "编译", "源码"]
 summary: "Author: zhaoji.liang 概述 Android编译目录介绍 1. Android编译相关的代码和文档基本都存放在android/build目录下； Android编译流程 编译步骤 + 输入以下指令 参见附录1 m help"

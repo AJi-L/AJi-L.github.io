@@ -1,5 +1,5 @@
 ---
-title: "Android windowIsTranslucent 导致无法切换 Activity"
+title: "【问题排查】windowIsTranslucent 导致无法切换 Activity"
 date: 2025-06-12
 tags: ["Android", "Activity", "窗口"]
 summary: "在使用CarLauncher的时候，因为CarLauncher背景非透明颜色，导致无法看到壁纸；因此设置了以下几个属性 但是，设置属性之后，出现无法切换会主页的情况。随后网上查询得知android:windowIsTranslucent经常"

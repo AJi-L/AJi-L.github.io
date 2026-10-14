@@ -1,5 +1,5 @@
 ---
-title: "Too many Binders sent to SYSTEM"
+title: "【问题排查】Binder 过多致 Launcher 崩溃重启（Too many Binders to SYSTEM）"
 date: 2025-10-10
 tags: ["Binder", "性能", "Launcher"]
 summary: "现象： + Launcher崩溃，黑屏重启 分析： 1. 直接原因：Launcher崩溃 2. 原因： AMS中判断U10用户过多Binder，导致U10用户的进程被回收。正常Bidner应该不会过多，一般是APP操作不当导致。 3. 继续"

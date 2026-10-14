@@ -1,5 +1,5 @@
 ---
-title: "CarLauncher 无法显示壁纸问题解决"
+title: "【问题排查】CarLauncher 无法显示壁纸"
 date: 2025-10-08
 tags: ["CarLauncher", "壁纸"]
 summary: "Reason & Steps Reason: 检查壁纸服务是否运行 根据源码和日志查看不运行的原因 分析 1. 通过服务列表查看壁纸服务是否运行 2. 通过源码发现 system server通过判断config enableWallpap"

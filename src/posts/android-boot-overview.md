@@ -1,5 +1,5 @@
 ---
-title: "Android 启动流程概览"
+title: "【启动流程 1】Android 启动流程概览"
 date: 2026-10-11
 tags: ["Android", "启动", "概览"]
 summary: "【Android系统启动】 1. Android启动流程概览 作为一个Android开发工程师，了解Android系统从上电到全功能启动的流程，是十分有必要的。这个对排查系统疑难问题、定制系统开发都十分有帮助。因此记录以下系列文章笔记。文章"

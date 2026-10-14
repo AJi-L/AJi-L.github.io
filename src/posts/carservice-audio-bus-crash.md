@@ -1,5 +1,5 @@
 ---
-title: "CarService 启动崩溃排查（car audio zones 缺 BUS 输出设备）"
+title: "【问题排查】CarService 启动崩溃（audio zones 缺 BUS 输出设备）"
 date: 2026-10-14
 tags: ["Android", "CarService", "车机音频", "音频策略", "RK3588", "WSL"]
 summary: "RK3588 板子上电后 com.android.car 反复崩溃在 CarAudioZonesHelper.validateOutputAudioDevice：car_audio_configuration.xml 要 bus0~bus7"

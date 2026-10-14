@@ -1,5 +1,5 @@
 ---
-title: "Trace 抓取方法"
+title: "【性能调试】Trace 抓取方法（systrace / perfetto）"
 date: 2026-06-23
 tags: ["Android", "Trace", "调试"]
 summary: "Systrace 1. 谷歌官方在22年3月发布的33.0.1版本的platform tools包中移除了systrace，而最后一个含有systrace的platform tools版本是33.0.0，因此使用<=33.0.0版本的pla"

@@ -1,5 +1,5 @@
 ---
-title: "编译报错 fork/exec ./build/bazel/bin/bazel: no such file or directory"
+title: "【编译构建】报错 fork/exec bazel: no such file or directory"
 date: 2025-10-10
 tags: ["AOSP", "编译", "bazel", "报错排查"]
 summary: "报错 解决办法： 参考： Android14之解决编译报错:bazel: no such file or directory(一百八十九) bazel之后找不到路径 CSDN博客 补充 20251010补充 + 最近发现，如果报错是baze"

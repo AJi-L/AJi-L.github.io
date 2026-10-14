@@ -1,5 +1,5 @@
 ---
-title: "QNX 常用指令"
+title: "【参考资料】QNX 常用指令"
 date: 2026-06-23
 tags: ["QNX", "命令", "车机"]
 summary: ""

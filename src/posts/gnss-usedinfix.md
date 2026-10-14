@@ -1,5 +1,5 @@
 ---
-title: "星历问题 usedInFix 排查（GNSS）"
+title: "【问题排查】星历问题 usedInFix（GNSS）"
 date: 2026-10-14
 tags: ["GNSS", "星历", "Location"]
 summary: "问题描述 1. 腾讯地图可用卫星数为0， 按照腾讯的分析，是以下截图的接口一直为FALSE，导致可用卫星数为0； Android时序 1. LocationManager 静态类new的时候已经监听, 套用比较多层 1. static cl"
