@@ -91,7 +91,7 @@ ffmpeg -hide_banner -y -fflags +genpts -i plain_pb_1.bin -c copy -movflags +fast
 
 重封装结果的第 5 分钟画面：
 
-
+![.vep 转换结果的一帧](/images/custom-player-video-to-mp4/vep-frame.png)
 
 ### 4. `.sz`：容器层解密 + 负载还原
 
@@ -193,11 +193,11 @@ ftyp(32) free(8) mdat(39,740,728) moov(355,356)      # 40,174,723 字节，结�
 解出来的画面已肉眼确认就是课程本体（VS Code 里的 `SurfaceFlinger/MessageQueue.cpp`、
 Perfetto 的 VSYNC 波形等）。
 
-
+![最终解出的画面（.sz）](/images/custom-player-video-to-mp4/sz-final-frame.png)
 
 第二个文件（`43-sf之vsync与perfetto结合分析巩固1.sz`）解出的帧，模型跨文件通用：
 
-
+![第二个 .sz 解出的画面](/images/custom-player-video-to-mp4/sz-file2-frame.png)
 
 ### 8. 一键复现（从 `.sz` 到 mp4）
 
